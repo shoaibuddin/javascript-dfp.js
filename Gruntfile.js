@@ -22,7 +22,11 @@ grunt.initConfig({
         'dist/dfp-ad.html': 'src/dfp-ad.html'    // 'destination': 'source' 
       }
     }
-  }
+  },
+  watch: {
+    files: ['src/'],
+    tasks: ['jshint','uglify','htmlmin']
+   }
 });
 
 // Load the plugin that provides the "jshint" task.
@@ -34,8 +38,8 @@ grunt.loadNpmTasks('grunt-contrib-uglify');
 // Load the plugin that provides the "htmlmin" task.
 grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-// Load the plugin that provides the "jasmine" task.
-//grunt.loadNpmTasks('grunt-contrib-jasmine');
+//Load the plugin that provides the "watch" task.
+grunt.loadNpmTasks('grunt-contrib-watch');
 
 // Default task(s).
 grunt.registerTask('default', ['jshint', 'uglify','htmlmin']);

@@ -118,7 +118,7 @@
                 }
             });                    
         },
-
+        
         setAndDisplayAdSlot: function (networkCode, unitName, adSize, divId, customTargettingAttributes) {
             this.setNetwork(networkCode, unitName);
             this.additionalDebug();
